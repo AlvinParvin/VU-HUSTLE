@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>List Your Business | VU Hustle</title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="container bar">
+        <a class="brand" href="index.html">
+            <img src="assets/img/logo.svg" alt="" width="36" height="36">
+            <span>VU Hustle</span>
+        </a>
+        <input type="checkbox" id="menu-check" class="menu-check">
+        <label for="menu-check" class="menu-toggle">Menu</label>
+        <nav id="site-nav" aria-label="Main menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="list-business.html" aria-current="page">List Your Business</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<nav class="breadcrumb container" aria-label="Breadcrumb">
+    <ol>
+        <li><a href="index.html">Home</a></li>
+        <li><span aria-current="page">List Your Business</span></li>
+    </ol>
+</nav>
+
+<main id="main">
+<section class="section">
+    <div class="container">
+        <h1>List Your Business</h1>
+        <p>Fill in the form below. Your listing will appear in the Directory after admin approval (usually within 24 hours).</p>
+
+        <form class="form" action="#" method="post" enctype="multipart/form-data">
+            <div class="field">
+                <label for="business_name">Business name *</label>
+                <input type="text" id="business_name" name="business_name" required placeholder="e.g. Aisha Perfumes">
+            </div>
+            <div class="field">
+                <label for="category">Category *</label>
+                <select id="category" name="category" required>
+                    <option value="">Choose…</option>
+                    <option>Food</option>
+                    <option>Fashion</option>
+                    <option>Beauty</option>
+                    <option>Phones and accessories</option>
+                    <option>Services</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="description">Short description *</label>
+                <textarea id="description" name="description" rows="3" required placeholder="What do you sell? Keep it clear and honest."></textarea>
+            </div>
+            <div class="field">
+                <label for="phone">Phone number *</label>
+                <input type="tel" id="phone" name="phone" required placeholder="07XX XXX XXX">
+                <p class="hint">Buyers will call or WhatsApp this number.</p>
+            </div>
+            <div class="field">
+                <label for="photo">Main photo *</label>
+                <input type="file" id="photo" name="photo" accept="image/jpeg,image/png,image/webp" required>
+                <p class="hint">JPG, PNG or WebP · max 3 MB.</p>
+            </div>
+
+            <h2>Products (at least one)</h2>
+            <div class="product-row">
+                <div class="field">
+                    <label for="p1_name">Product name *</label>
+                    <input type="text" id="p1_name" name="products[0][name]" required placeholder="e.g. Body spray 200 ml">
+                </div>
+                <div class="field">
+                    <label for="p1_price">Price (UGX) *</label>
+                    <input type="number" id="p1_price" name="products[0][price]" min="0" step="500" required placeholder="15000">
+                </div>
+                <div class="field product-img-field">
+                    <label for="p1_image">Product photo *</label>
+                    <input type="file" id="p1_image" name="products[0][image]" accept="image/jpeg,image/png,image/webp" required>
+                    <p class="hint">Show the item buyers will get. JPG, PNG or WebP · max 3 MB.</p>
+                </div>
+            </div>
+            <div class="product-row">
+                <div class="field">
+                    <label for="p2_name">Product name (optional)</label>
+                    <input type="text" id="p2_name" name="products[1][name]">
+                </div>
+                <div class="field">
+                    <label for="p2_price">Price (UGX)</label>
+                    <input type="number" id="p2_price" name="products[1][price]" min="0" step="500">
+                </div>
+                <div class="field product-img-field">
+                    <label for="p2_image">Product photo (optional)</label>
+                    <input type="file" id="p2_image" name="products[1][image]" accept="image/jpeg,image/png,image/webp">
+                    <p class="hint">Show the item buyers will get. JPG, PNG or WebP · max 3 MB.</p>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>
+                    <input type="checkbox" name="agree" required>
+                    I agree to the <a href="safety-terms.html">Safety &amp; Terms</a> and confirm the information is accurate.
+                </label>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit for approval</button>
+        </form>
+    </div>
+</section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h2>VU Hustle</h2>
+                <p>Student business directory for Victoria University Uganda.</p>
+            </div>
+            <div>
+                <h2>Links</h2>
+                <p><a href="directory.html">Directory</a><br>
+                   <a href="list-business.html">List Your Business</a><br>
+                   <a href="about.html">About</a></p>
+            </div>
+            <div>
+                <h2>Help</h2>
+                <p><a href="contact.html">Contact</a><br>
+                   <a href="safety-terms.html">Safety &amp; Terms</a></p>
+            </div>
+        </div>
+        <p class="copy">© 2026 VU Hustle · Group 14</p>
+    </div>
+</footer>
+</body>
+</html>
